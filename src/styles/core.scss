@@ -1,0 +1,11 @@
+@import '~brandVariables/variables.scss';
+@import '~brandVariables/font.scss';
+
+body {
+  background: $page-bg;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
+}

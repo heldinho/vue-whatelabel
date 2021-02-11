@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Dark Theme Font";
+  /*
+    (commented out because paths without file breaks build)
+    src: url("dark-theme-font.woff2") format("woff2"),
+         url("dark-theme-font.woff") format("woff");
+    */
+}
+
+body {
+  color: #fff;
+  background-color: #444;
+}

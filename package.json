@@ -1,0 +1,53 @@
+{
+  "name": "vue-whitelabel-solution",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "prod": "vue-cli-service build --dest dist/",
+    "serve": "npm run serve-light",
+    "serve-light": "cross-env process.env.VUE_APP_BRAND='light' vue-cli-service serve",
+    "serve-dark": "cross-env process.env.VUE_APP_BRAND='dark' vue-cli-service serve",
+    "build": "npm run build-light && npm run build-dark",
+    "build-light": "cross-env process.env.VUE_APP_BRAND='light' vue-cli-service build --dest dist/light",
+    "build-dark": "cross-env process.env.VUE_APP_BRAND='dark' vue-cli-service build --dest dist/dark",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.3",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.3",
+    "@vue/cli-service": "^3.0.0-rc.3",
+    "cross-env": "^5.2.0",
+    "node-sass": "^4.9.1",
+    "sass-loader": "^7.0.3",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
